@@ -1,0 +1,294 @@
+.site-header {
+  background: #688c9c;
+  padding: 20px 0;
+}
+
+.header-top {
+  display: flex;
+  justify-content: center;      /* center group horizontally */
+  align-items: center;          /* align logo & nav vertically */
+  gap: 120px;                    
+  padding: 0 20px;
+  margin-left: -180px;
+}
+
+.branding .logo {
+  height: 60px;
+  display: block;
+}
+
+.navbar {
+  /* no longer fixed at top */
+  position: static;
+  background: none;
+  box-shadow: none;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #a6c264;
+  text-decoration: none;
+  padding: 5px 0;
+  transition: color 0.3s, border-bottom 0.3s;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+  border-bottom: 2px solid #1403ac;
+}
+
+.header-content {
+  text-align: center;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+.header-content h1 {
+  font-size: 2rem;
+  color: #e6e6e6;
+  margin-bottom: 0.5em;
+}
+
+.header-content p {
+  font-size: 1.1rem;
+  color: #e6e6e6;
+}
+/* main content starts below header */
+
+.hero {
+  display: flex;
+  align-items: center;        /* vertical centering */
+  justify-content: flex-start;
+  gap: 40px;
+  padding: 40px 20px;
+}
+
+.hero-text {
+  flex: 1;                    
+  display: flex;
+  flex-direction: column;
+  align-items: center;        /* center h1, h2, p horizontally */
+  justify-content: center;    /* (optional) center them vertically */
+  text-align: center;         /* center multiline text */
+}
+
+/* 3. Fix that p typo so your paragraph styles actually apply */
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5em;
+}
+
+/* 4. (Optional) If you want to explicitly scope your headings… */
+.hero h1 {
+  font-size: 2.5rem;
+  color: #62743a;
+  margin-bottom: 0.5em;
+}
+.hero h2 {
+  font-size: 1.5rem;
+  color: #62743a;
+  margin-bottom: 1em;
+}
+
+.hero-image img {
+  max-width: 100%;            /* responsive width */
+  height: auto;
+  border-radius: 8px;
+}
+.cta-button {
+  background-color: #62743a;
+  color: #fff;
+  border: none;
+  padding: 14px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-image {
+    margin-top: 20px;
+  }
+}
+.sponsors {
+  padding: 40px 20px;
+  text-align: center;       /* center the heading/text + logos */
+}
+.sponsor-text h2 {
+  font-size: 2rem;
+  color: #62743a;
+  margin-bottom: 10px;      /* space between heading and text */
+}
+.sponsor-text p{
+    font-size: 1.2rem;
+    margin-bottom: 20px;      /* space between text and logos */
+}
+
+/* space under your heading block */
+.sponsor-text {
+  margin-bottom: 20px;
+}
+
+/* lay logos out in a row, centered */
+.sponsor-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;                /* space between logos */
+  flex-wrap: wrap;          /* wrap on small screens */
+}
+
+/* force all logos to the same height */
+.sponsor-logos img {
+  height: 120px;             /* pick a size that fits your design */
+  width: auto;
+  object-fit: contain;      /* preserve aspect ratio */
+}
+/* ───────── Site Footer ───────── */
+.site-footer {
+  background-color: #282c34;
+  color: #e6e6e6;
+  padding-top: 40px;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Container: three columns */
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Each column */
+.footer-col {
+  flex: 1;
+  min-width: 240px;
+}
+
+/* 1. Contact Us Form */
+.contact-us h3 {
+  margin-bottom: 15px;
+  font-size: 1.25rem;
+}
+
+.contact-us form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-us input,
+.contact-us textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.contact-us button {
+  background-color: #62743a;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-us button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+
+/* 2. Logo + Contact Info */
+.logo-info {
+  text-align: center;
+}
+
+.logo-info .footer-logo img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.logo-info p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+}
+
+/* 3. Sitemap Links */
+.sitemap h3 {
+  margin-bottom: 15px;
+  font-size: 1.25rem;
+}
+
+.sitemap ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sitemap li {
+  margin-bottom: 10px;
+}
+
+.sitemap a {
+  color: #e6e6e6;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.sitemap a:hover {
+  color: #62743a;
+}
+
+/* 4. Footer Bottom Bar */
+.footer-bottom {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #3a3f47;
+  margin-top: 40px;
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-col {
+    text-align: center;
+  }
+}
+
+
+
