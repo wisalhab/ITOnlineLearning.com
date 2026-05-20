@@ -1,0 +1,37 @@
+/* Header background + overlay */
+.hero {
+  background: url('tile.png') center/cover no-repeat;
+  height: 60vh;
+  position: relative;
+}
+
+/* Semi-transparent overlay to improve text contrast */
+.hero .overlay {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  padding: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Optional: tweak section headings */
+section h2 {
+  font-weight: 500;
+}
+
+.img-fixed {
+  width: 100%;
+  height: 200px; /* Or any consistent height */
+  object-fit: cover; /* Keeps aspect ratio while filling box */
+}
+
+.img-fixed {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+footer a {
+  text-decoration: none;
+}
