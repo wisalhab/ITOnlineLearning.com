@@ -1,0 +1,29 @@
+/* Base font */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar brand logo spacing */
+.navbar-brand img {
+  max-height: 40px;
+}
+
+/* Filters: ensure consistent width */
+.filters .form-control,
+.filters .form-select {
+  min-width: 150px;
+}
+
+/* Property card image crop */
+.property-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Map container sizing */
+.map-container {
+  height: 600px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+}
