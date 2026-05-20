@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #2f2f2f;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background-color: #3f3f3f;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons i {
+  color: #fff;
+  font-size: 20px;
+}
+
+/* —— NEW FLEX LAYOUT —— */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  /* full viewport height minus header */
+  min-height: calc(100vh - 80px);
+  padding: 40px 20px;
+}
+
+/* remove default margins so flex spacing is predictable */
+.content > * {
+  margin: 0;
+}
+
+/* Top-left */
+.content h1 {
+  order: 1;
+  flex: 1 1 30%;
+  align-self: flex-start;
+  text-align: left;
+  font-family: 'Courier New', monospace;
+  font-size: 64px;
+  color: #d1d1d1;
+}
+
+/* Top-right */
+.content h2 {
+  order: 2;
+  flex: 1 1 30%;
+  align-self: flex-start;
+  text-align: right;
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 40px;
+  color: #ffffff;
+}
+
+/* Center-left */
+.content h3 {
+  order: 3;
+  flex: 1 1 30%;
+  align-self: center;
+  text-align: left;
+  font-family: 'Lucida Sans', sans-serif;
+  font-size: 28px;
+  color: #bbbbbb;
+}
+
+/* Center-right */
+.content .aside {
+  order: 4;
+  flex: 1 1 30%;
+  align-self: center;
+  text-align: right;
+  font-family: 'Verdana', sans-serif;
+  font-size: 18px;
+  color: #aaaaaa;
+}
+
+/* Full-width bottom */
+.content p {
+  order: 5;
+  flex: 1 1 100%;
+  text-align: center;
+  font-family: 'Times New Roman', serif;
+  font-size: 14px;
+  color: #dddddd;
+  line-height: 1.6;
+  /* remove max-width so it spans edge-to-edge */
+  max-width: none;
+}
